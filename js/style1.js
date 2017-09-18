@@ -1,0 +1,716 @@
+
+  /*Show ảnh*/
+/*Header*/
+$(document).ready(main);
+ 
+var contador = 1;
+ 
+function main () {
+  $('.menu_bar').click(function(){
+    if (contador == 1) {
+      $('nav').animate({
+        left: '0'
+      });
+      contador = 0;
+    } else {
+      contador = 1;
+      $('nav').animate({
+        left: '-100%'
+      });
+    }
+  });
+ 
+  // Mostramos y ocultamos submenus
+  $('.submenu').click(function(){
+    $(this).children('.children').slideToggle();
+  });
+};
+
+
+
+
+
+/* adsadsadasdsad  */
+$(function() {
+  
+  $('#alertMe').click(function(e) {
+    
+    e.preventDefault();
+    
+    $('#successAlert').slideDown();
+    
+  });
+  
+  
+});
+/* END adsadsadasdsad  */
+
+
+/* Show Info hotel index_info.html */
+jssor_slider1_starter = function (containerId) {
+
+            var _SlideshowTransitions = [
+            //Fade in L
+                {$Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade out R
+                , { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade in R
+                , { $Duration: 1200, x: -0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade out L
+                , { $Duration: 1200, x: 0.3, $SlideOut: true, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+
+            //Fade in T
+                , { $Duration: 1200, y: 0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade out B
+                , { $Duration: 1200, y: -0.3, $SlideOut: true, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade in B
+                , { $Duration: 1200, y: -0.3, $During: { $Top: [0.3, 0.7] }, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade out T
+                , { $Duration: 1200, y: 0.3, $SlideOut: true, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+
+            //Fade in LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Column: 3 }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade out LR
+                , { $Duration: 1200, x: 0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 3 }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade in TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Row: 12 }, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade out TB
+                , { $Duration: 1200, y: 0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 12 }, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+
+            //Fade in LR Chess
+                , { $Duration: 1200, y: 0.3, $Cols: 2, $During: { $Top: [0.3, 0.7] }, $ChessMode: { $Column: 12 }, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade out LR Chess
+                , { $Duration: 1200, y: -0.3, $Cols: 2, $SlideOut: true, $ChessMode: { $Column: 12 }, $Easing: { $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade in TB Chess
+                , { $Duration: 1200, x: 0.3, $Rows: 2, $During: { $Left: [0.3, 0.7] }, $ChessMode: { $Row: 3 }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade out TB Chess
+                , { $Duration: 1200, x: -0.3, $Rows: 2, $SlideOut: true, $ChessMode: { $Row: 3 }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+
+            //Fade in Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+            //Fade out Corners
+                , { $Duration: 1200, x: 0.3, y: 0.3, $Cols: 2, $Rows: 2, $During: { $Left: [0.3, 0.7], $Top: [0.3, 0.7] }, $SlideOut: true, $ChessMode: { $Column: 3, $Row: 12 }, $Easing: { $Left: $Jease$.$InCubic, $Top: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2, $Outside: true }
+
+            //Fade Clip in H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $Assembly: 260, $Easing: { $Clip: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade Clip out H
+                , { $Duration: 1200, $Delay: 20, $Clip: 3, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $Jease$.$OutCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade Clip in V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $Assembly: 260, $Easing: { $Clip: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+            //Fade Clip out V
+                , { $Duration: 1200, $Delay: 20, $Clip: 12, $SlideOut: true, $Assembly: 260, $Easing: { $Clip: $Jease$.$OutCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 }
+                ];
+
+            var options = {
+                $AutoPlay: 1,                                    //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+                $Idle: 1500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                                   //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+                $ArrowKeyNavigation: true,                    //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 800,                                //Specifies default duration (swipe) for slide in milliseconds
+
+                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                 //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+
+                $ArrowNavigatorOptions: {                           //[Optional] Options to specify and enable arrow navigator or not
+                    $Class: $JssorArrowNavigator$,                  //[Requried] Class to create arrow navigator instance
+                    $ChanceToShow: 1                                //[Required] 0 Never, 1 Mouse Over, 2 Always
+                },
+
+                $ThumbnailNavigatorOptions: {                       //[Optional] Options to specify and enable thumbnail navigator or not
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $SpacingX: 8,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $Cols: 10,                             //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 360                           //[Optional] The offset position to park thumbnail
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth)
+                    jssor_slider1.$ScaleWidth(Math.max(Math.min(parentWidth, 800), 300));
+                else
+                    $Jssor$.$Delay(ScaleSlider, 30);
+            }
+
+            ScaleSlider();
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            //responsive code end
+        };
+
+
+
+
+
+
+
+//DATE
+//this function will find today's date
+// function calendar(){
+//     var day=['Chủ nhật','Thứ hai','Thứ ba','Thứ tư','Thứ năm','Thứ sáu','Thứ bảy'];
+//     var month=['01','02','03','04','05','06','07','08','09','10','11','12'];
+//     var d=new Date();
+//     setText('calendar-day', day[d.getDay()]);
+//     setText('calendar-date', d.getDate());
+//     setText('calendar-month-year', month[d.getMonth()]+'/'+(1900+d.getYear()));
+// };
+
+//this function will set the text value of <p> tags
+function setText(id, val){
+    if(val < 10){
+        val = '0' + val;    //add leading 0 if val < 10
+    }
+    document.getElementById(id).innerHTML = val;
+};
+
+
+//call calendar() when page load
+// window.onload = calendar;
+//END DATE
+
+
+
+
+//SHow Slide Logo
+$(document).ready(function() {
+    $('#Carousel').carousel({
+        interval: 5000
+    })
+    // calendar();
+});
+
+
+// SHow SIlder Header
+$(document).ready(function(){
+    
+    var clickEvent = false;
+    $('#myCarousel').carousel({
+        interval:   5000  
+    }).on('click', '.list-group li', function() {
+            clickEvent = true;
+            $('.list-group li').removeClass('active');
+            $(this).addClass('active');     
+    }).on('slid.bs.carousel', function(e) {
+        if(!clickEvent) {
+            var count = $('.list-group').children().length -1;
+            var current = $('.list-group li.active');
+            current.removeClass('active').next().addClass('active');
+            var id = parseInt(current.data('slide-to'));
+            if(count == id) {
+                $('.list-group li').first().addClass('active'); 
+            }
+        }
+        clickEvent = false;
+    });
+})
+
+$(window).load(function() {
+    var boxheight = $('#myCarousel .carousel-inner').innerHeight();
+    var itemlength = $('#myCarousel .item').length;
+    var triggerheight = Math.round(boxheight/itemlength+1);
+    $('#myCarousel .list-group-item').outerHeight(triggerheight);
+});
+
+//
+
+$(function () {
+            $('#dg-container').carrousel({
+                current: 0,
+                autoplay: true,
+                interval: 3000
+            });
+        });
+
+!function(e,n,t){function r(e,n){return typeof e===n}function o(){var e,n,t,o,s,i,f;for(var a in y){if(e=[],n=y[a],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(o=r(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],f=i.split("."),1===f.length?Modernizr[f[0]]=o:(!Modernizr[f[0]]||Modernizr[f[0]]instanceof Boolean||(Modernizr[f[0]]=new Boolean(Modernizr[f[0]])),Modernizr[f[0]][f[1]]=o),C.push((o?"":"no-")+f.join("-"))}}function s(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):_?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function i(){var e=n.body;return e||(e=s(_?"svg":"body"),e.fake=!0),e}function f(e,t,r,o){var f,a,u,l,p="modernizr",d=s("div"),c=i();if(parseInt(r,10))for(;r--;)u=s("div"),u.id=o?o[r]:p+(r+1),d.appendChild(u);return f=s("style"),f.type="text/css",f.id="s"+p,(c.fake?c:d).appendChild(f),c.appendChild(d),f.styleSheet?f.styleSheet.cssText=e:f.appendChild(n.createTextNode(e)),d.id=p,c.fake&&(c.style.background="",c.style.overflow="hidden",l=S.style.overflow,S.style.overflow="hidden",S.appendChild(c)),a=t(d,e),c.fake?(c.parentNode.removeChild(c),S.style.overflow=l,S.offsetHeight):d.parentNode.removeChild(d),!!a}function a(e,n){return!!~(""+e).indexOf(n)}function u(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function l(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function p(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(l(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+l(n[o])+":"+r+")");return s=s.join(" or "),f("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function d(e,n,o,i){function f(){d&&(delete k.style,delete k.modElem)}if(i=r(i,"undefined")?!1:i,!r(o,"undefined")){var l=p(e,o);if(!r(l,"undefined"))return l}for(var d,c,m,v,h,y=["modernizr","tspan"];!k.style;)d=!0,k.modElem=s(y.shift()),k.style=k.modElem.style;for(m=e.length,c=0;m>c;c++)if(v=e[c],h=k.style[v],a(v,"-")&&(v=u(v)),k.style[v]!==t){if(i||r(o,"undefined"))return f(),"pfx"==n?v:!0;try{k.style[v]=o}catch(g){}if(k.style[v]!=h)return f(),"pfx"==n?v:!0}return f(),!1}function c(e,n){return function(){return e.apply(n,arguments)}}function m(e,n,t){var o;for(var s in e)if(e[s]in n)return t===!1?e[s]:(o=n[e[s]],r(o,"function")?c(o,t||n):o);return!1}function v(e,n,t,o,s){var i=e.charAt(0).toUpperCase()+e.slice(1),f=(e+" "+P.join(i+" ")+i).split(" ");return r(n,"string")||r(n,"undefined")?d(f,n,o,s):(f=(e+" "+T.join(i+" ")+i).split(" "),m(f,n,t))}function h(e,n,r){return v(e,t,t,n,r)}var y=[],g={_version:"3.0.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){y.push({name:e,fn:n,options:t})},addAsyncTest:function(e){y.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=g,Modernizr=new Modernizr;var C=[],S=n.documentElement,w="CSS"in e&&"supports"in e.CSS,x="supportsCSS"in e;Modernizr.addTest("supports",w||x);var _="svg"===S.nodeName.toLowerCase(),b=g.testStyles=f,z="Moz O ms Webkit",P=g._config.usePrefixes?z.split(" "):[];g._cssomPrefixes=P;var T=g._config.usePrefixes?z.toLowerCase().split(" "):[];g._domPrefixes=T;var E={elem:s("modernizr")};Modernizr._q.push(function(){delete E.elem});var k={style:E.elem.style};Modernizr._q.unshift(function(){delete k.style}),g.testAllProps=v,g.testAllProps=h,Modernizr.addTest("csstransforms3d",function(){var e=!!h("perspective","1px",!0),n=Modernizr._config.usePrefixes;if(e&&(!n||"webkitPerspective"in S.style)){var t;Modernizr.supports?t="@supports (perspective: 1px)":(t="@media (transform-3d)",n&&(t+=",(-webkit-transform-3d)")),t+="{#modernizr{left:9px;position:absolute;height:5px;margin:0;padding:0;border:0}}",b(t,function(n){e=9===n.offsetLeft&&5===n.offsetHeight})}return e}),Modernizr.addTest("csstransforms",function(){return-1===navigator.userAgent.indexOf("Android 2.")&&h("transform","scale(1)",!0)}),o(),delete g.addTest,delete g.addAsyncTest;for(var A=0;A<Modernizr._q.length;A++)Modernizr._q[A]();e.Modernizr=Modernizr}(window,document);
+
+
+(function ($) {
+
+    $.carrousel = function (options, element) {
+        this.$el = $(element);
+        this._init(options);
+    };
+
+    $.carrousel.defaults = {
+        current: 0, // index of current item
+        autoplay: true,// slideshow on / off
+        interval: 3000  // time between transitions
+    };
+
+    $.carrousel.prototype = {
+        // 初始化
+        _init: function (options) {
+            this.options = $.extend(true, {}, $.carrousel.defaults, options);
+
+            this.support3d = Modernizr.csstransforms3d;
+            this.support2d = Modernizr.csstransforms;
+
+            this.$wrapper = this.$el.find('.dg-wrapper');
+            this.$items = this.$wrapper.children();
+            this.itemsCount = this.$items.length;
+            this.$nav = this.$el.find('nav');
+            this.$navPrev = this.$nav.find('.dg-prev');
+            this.$navNext = this.$nav.find('.dg-next');
+            this.button = $('#lightButton li');
+            this.box = $('.banner');
+            this.imgWidth = $('.banner .dg-wrapper img').width();
+
+            this.indexB = 0;
+            this.CSSX = 0;
+            this.CSSXout = 0;
+
+            this.button[0].classList.add('light');
+
+            this.current = this.options.current;
+            this.isAnim = false;
+            this.$items.css({
+                'opacity': 1
+            });
+            this._updateWidth();
+            this._layout();
+            // load the events
+            this._loadEvents();
+            // slideshow
+            if (this.options.autoplay) {
+                this._startSlideshow();
+            }
+
+            var _self = this;
+            for (var i = 0, len = this.button.length; i < len; i++) {     // 点击小圆点
+                this.button[i].addEventListener('click', function() {
+                    var toIndex = parseInt(this.getAttribute('index'));
+                    var toMove = toIndex - _self.indexB;
+                    switch (toMove) {
+                        case 0:
+                            break;
+                        case 1:
+                            _self._navigate('next', 'dg-transition');
+                            break;
+                        case -1:
+                            _self._navigate('prev', 'dg-transition');
+                            break;
+                        default:
+                            _self._stopSlideshow();
+                            var bTime = setInterval(function () {
+                                if (!_self.isAnim) {
+                                    if (!toMove) {
+                                        clearInterval(bTime);
+                                        if (_self.options.autoplay) {
+                                            _self._startSlideshow();
+                                        }
+                                    }
+                                    else if (toMove > 0) {
+                                        _self._navigate('next', 'dg-transition-fast');
+                                        toMove--;
+                                    }
+                                    else if (toMove < 0) {
+                                        _self._navigate('prev', 'dg-transition-fast');
+                                        toMove++;
+                                    }
+                                }
+                            }, 0);
+                            break;
+                    }
+                });
+            }
+        },
+
+        // 自适应宽度
+        _updateWidth: function () {
+            if (this.support3d) {
+                if (document.body.clientWidth < 1000) {
+                    this.CSSX = ($(this.box).width()  - 10 - this.imgWidth * 0.7) / 2;
+                    this.CSSXout = 0;
+                }
+                else if (document.body.clientWidth >= 1000) {
+                    this.CSSX = ($(this.box).width() * 1.2 + 480 - 10 - this.imgWidth * 0.5) / 2 * 0.5;
+                    this.CSSXout = ($(this.box).width() * 1.2 + 480 - 10 - this.imgWidth * 0.5) / 2;
+                }
+            }
+            else if (this.support2d) {
+                if (document.body.clientWidth < 1464) {
+                    this.CSSX = ($(this.box).width() - 10 - this.imgWidth * 0.9) / 2;
+                    this.CSSXout = 0;
+                }
+                else if (document.body.clientWidth >= 1464) {
+                    this.CSSX = (($(this.box).width() - 10 - this.imgWidth * 0.8) / 2) * 0.7;
+                    this.CSSXout = ($(this.box).width() - 10 - this.imgWidth * 0.8) / 2;
+                }
+            }
+        },
+
+        // 显示小圆点
+        _showButton: function () {
+            var _self = this;
+            for (var i = 0, len = _self.button.length; i < len; i++) {
+                if (_self.button[i].classList.contains('light')) {
+                    _self.button[i].classList.remove('light');
+                    break;
+                }
+            }
+            _self.button[_self.indexB].classList.add('light');
+        },
+
+        // 用来绑定点击事件
+        _click: function (element, move) {
+            var _self = this;
+            element.off('click.gallery');
+            element.on('click.gallery', function () {
+                if (!this.isAnim) {
+                    _self._navigate(move);
+                    if (_self.options.autoplay) {
+                        _self._startSlideshow();
+                    }
+                }
+            });
+        },
+
+        // 初始样式
+        _layout: function () {
+            this._setItems();
+
+            this.$leftItm.css(this._getCoordinates('left'));
+            this.$rightItm.css(this._getCoordinates('right'));
+            this.$currentItm.css(this._getCoordinates('center')).addClass('dg-center');
+
+            this._click(this.$leftItm, 'prev');
+            this._click(this.$prevItm, 'prev');
+
+            this.$currentItm.off('click.carrousel');
+
+            this._click(this.$rightItm, 'next');
+            this._click(this.$nextItm, 'next');
+
+            this.$nextItm.css(this._getCoordinates('outright'));
+            this.$prevItm.css(this._getCoordinates('outleft'));
+
+            // this.$currentItm[0].href = this.$currentItm[0].getAttribute('link');
+            this.$currentItm[0].href = "#";
+        },
+
+        // 更新图片位置
+        _setItems: function () {
+
+            this.$items.removeClass('dg-center');
+
+            this.$currentItm = this.$items.eq(this.current);
+            this.$leftItm = ( this.current === 0 ) ? this.$items.eq(this.itemsCount - 1) : this.$items.eq(this.current - 1);
+            this.$rightItm = ( this.current === this.itemsCount - 1 ) ? this.$items.eq(0) : this.$items.eq(this.current + 1);
+            this.$nextItm = ( this.$rightItm.index() === this.itemsCount - 1 ) ? this.$items.eq(0) : this.$rightItm.next();
+            this.$prevItm = ( this.$leftItm.index() === 0 ) ? this.$items.eq(this.itemsCount - 1) : this.$leftItm.prev();
+        },
+
+        _loadEvents: function () {
+            var _self = this;
+            this.$navPrev.on('click.carrousel', function () {
+                _self._navigate('prev');
+                return false;
+            });
+
+            this.$navNext.on('click.carrousel', function () {
+                _self._navigate('next');
+                return false;
+            });
+
+            this.$wrapper.on('webkitTransitionEnd.carrousel transitionend.carrousel OTransitionEnd.carrousel', function () {
+                _self.$currentItm.addClass('dg-center');
+                _self.$items.removeClass('dg-transition');
+                _self.$items.removeClass('dg-transition-fast');
+                _self.isAnim = false;
+
+                // 处理中间元素的href
+                // _self.$currentItm[0].href = _self.$currentItm[0].getAttribute('link');
+                _self.$currentItm[0].href = '#';
+                _self.$leftItm[0].href = '#';
+                _self.$rightItm[0].href = '#';
+
+                // 处理左右元素的点击事件
+                _self._click(_self.$leftItm, 'prev');
+                _self._click(_self.$prevItm, 'prev');
+
+                _self.$currentItm.off('click.gallery');
+
+                _self._click(_self.$rightItm, 'next');
+                _self._click(_self.$nextItm, 'next');
+            });
+        },
+
+        // 定义样式
+        _getCoordinates: function (position) {
+            if (this.support3d) {
+                switch (position) {
+                    case 'outleft':
+                        return {
+                             'opacity': 0,
+                            'visibility': 'hidden'
+                        };
+                        break;
+                    case 'outright':
+                        return {
+                             'opacity': 0,
+                            'visibility': 'hidden'
+                        };
+                        break;
+                    case 'left':
+                        return {
+                            '-webkit-transform': 'translateX(-' + this.CSSX + 'px) translateZ(-300px) rotateY(25deg)',
+                            '-moz-transform': 'translateX(-' + this.CSSX + 'px) translateZ(-300px) rotateY(25deg)',
+                            '-o-transform': 'translateX(-' + this.CSSX + 'px) translateZ(-300px) rotateY(25deg)',
+                            '-ms-transform': 'translateX(-' + this.CSSX + 'px) translateZ(-300px) rotateY(25deg)',
+                            'transform': 'translateX(-' + this.CSSX + 'px) translateZ(-300px) rotateY(25deg)',
+                            'opacity': 1,
+                            'visibility': 'visible'
+                        };
+                        break;
+                    case 'right':
+                        return {
+                            '-webkit-transform': 'translateX(' + this.CSSX + 'px) translateZ(-300px) rotateY(-25deg)',
+                            '-moz-transform': 'translateX(' + this.CSSX + 'px) translateZ(-300px) rotateY(-25deg)',
+                            '-o-transform': 'translateX(' + this.CSSX + 'px) translateZ(-300px) rotateY(-25deg)',
+                            '-ms-transform': 'translateX(' + this.CSSX + 'px) translateZ(-300px) rotateY(-25deg)',
+                            'transform': 'translateX(' + this.CSSX + 'px) translateZ(-300px) rotateY(-25deg)',
+                            'opacity': 1,
+                            'visibility': 'visible'
+                        };
+                        break;
+                    case 'center':
+                        return {
+                            '-webkit-transform': 'translateX(0px) translateZ(0px) rotateY(0deg)',
+                            '-moz-transform': 'translateX(0px) translateZ(0px) rotateY(0deg)',
+                            '-o-transform': 'translateX(0px) translateZ(0px) rotateY(0deg)',
+                            '-ms-transform': 'translateX(0px) translateZ(0px) rotateY(0deg)',
+                            'transform': 'translateX(0px) translateZ(0px) rotateY(0deg)',
+                            'opacity': 1,
+                            'visibility': 'visible'
+                        };
+                        break;
+                    case 'hide':
+                        return {
+                            '-webkit-transform': 'translate(0px) scale(0.7)',
+                            'opacity': 1,
+                            'visibility': 'visible',
+                            'z-index': 1
+                        };
+                        break;
+                }
+            }
+            else if (this.support2d) {
+                switch (position) {
+                    case 'outleft':
+                        return {
+                            '-webkit-transform': 'translate(-' + this.CSSXout + 'px) scale(0.8)',
+                            '-moz-transform': 'translate(-' + this.CSSXout + 'px) scale(0.8)',
+                            '-o-transform': 'translate(-' + this.CSSXout + 'px) scale(0.8)',
+                            '-ms-transform': 'translate(-' + this.CSSXout + 'px) scale(0.8)',
+                            'transform': 'translate(-' + this.CSSXout + 'px) scale(0.8)',
+                            'opacity': 1,
+                            'z-index': 2
+                        };
+                        break;
+                    case 'outright':
+                        return {
+                            '-webkit-transform': 'translate(' + this.CSSXout + 'px) scale(0.8)',
+                            '-moz-transform': 'translate(' + this.CSSXout + 'px) scale(0.8)',
+                            '-o-transform': 'translate(' + this.CSSXout + 'px) scale(0.8)',
+                            '-ms-transform': 'translate(' + this.CSSXout + 'px) scale(0.8)',
+                            'transform': 'translate(' + this.CSSXout + 'px) scale(0.8)',
+                            'opacity': 1,
+                            'z-index': 2
+                        };
+                        break;
+                    case 'left':
+                        return {
+                            '-webkit-transform': 'translate(-' + this.CSSX + 'px) scale(0.9)',
+                            '-moz-transform': 'translate(-' + this.CSSX + 'px) scale(0.9)',
+                            '-o-transform': 'translate(-' + this.CSSX + 'px) scale(0.9)',
+                            '-ms-transform': 'translate(-' + this.CSSX + 'px) scale(0.9)',
+                            'transform': 'translate(-' + this.CSSX + 'px) scale(0.9)',
+                            'opacity': 1,
+                            'visibility': 'visible',
+                            'z-index': 3
+                        };
+                        break;
+                    case 'right':
+                        return {
+                            '-webkit-transform': 'translate(' + this.CSSX + 'px) scale(0.9)',
+                            '-moz-transform': 'translate(' + this.CSSX + 'px) scale(0.9)',
+                            '-o-transform': 'translate(' + this.CSSX + 'px) scale(0.9)',
+                            '-ms-transform': 'translate(' + this.CSSX + 'px) scale(0.9)',
+                            'transform': 'translate(' + this.CSSX + 'px) scale(0.9)',
+                            'opacity': 1,
+                            'visibility': 'visible',
+                            'z-index': 3
+                        };
+                        break;
+                    case 'center':
+                        return {
+                            '-webkit-transform': 'translate(0px) scale(1)',
+                            '-moz-transform': 'translate(0px) scale(1)',
+                            '-o-transform': 'translate(0px) scale(1)',
+                            '-ms-transform': 'translate(0px) scale(1)',
+                            'transform': 'translate(0px) scale(1)',
+                            'opacity': 1,
+                            'visibility': 'visible',
+                            'z-index': 4
+                        };
+                    case 'hide':
+                        return {
+                            '-webkit-transform': 'translate(0px) scale(0.7)',
+                            '-moz-transform': 'translate(0px) scale(0.7)',
+                            '-o-transform': 'translate(0px) scale(0.7)',
+                            '-ms-transform': 'translate(0px) scale(0.7)',
+                            'transform': 'translate(0px) scale(0.7)',
+                            'opacity': 1,
+                            'visibility': 'visible',
+                            'z-index': 1
+                        }
+                        break;
+                }
+            }
+        },
+
+        // 切换
+        _navigate: function (dir, speedClass) {
+            speedClass = speedClass || 'dg-transition';
+            if (!this.isAnim) {
+                this._updateWidth();
+
+                this.isAnim = true;
+                var _self = this;
+
+                switch (dir) {
+                    case 'next' :
+                        this.indexB++;
+                        if (this.indexB === this.itemsCount) {
+                            this.indexB = 0;
+                        }
+                        this._showButton();
+                        this.current = this.$rightItm.index();
+                        // current item moves left
+                        this.$currentItm.addClass(speedClass).css(this._getCoordinates('left'));
+
+                        // right item moves to the center
+                        this.$rightItm.addClass(speedClass).css(this._getCoordinates('center'));
+
+                        // left item moves out
+                        this.$leftItm.addClass(speedClass).css(this._getCoordinates('outleft'));
+
+                        this.$nextItm.addClass(speedClass).css(this._getCoordinates('right'));
+
+                        if (this.itemsCount > 5) {
+                            this.$prevItm.addClass(speedClass).css(this._getCoordinates('hide'));
+                            this.$prevItm.off('click.carrousel');
+                        }
+
+                        var nextEle = ( this.$nextItm.index() === this.itemsCount - 1 ) ? this.$items.eq(0) : this.$nextItm.next();
+                        $(nextEle).addClass(speedClass).css(this._getCoordinates('outright'));
+                        $(nextEle).off('click.carrousel');
+
+                        break;
+
+                    case 'prev' :
+                        this.indexB--;
+                        if (this.indexB === -1) {
+                            this.indexB = this.itemsCount - 1;
+                        }
+                        this._showButton();
+                        this.current = this.$leftItm.index();
+                        // current item moves right
+                        this.$currentItm.addClass(speedClass).css(this._getCoordinates('right'));
+
+                        // left item moves to the center
+                        this.$leftItm.addClass(speedClass).css(this._getCoordinates('center'));
+
+                        // right item moves out
+                        this.$rightItm.addClass(speedClass).css(this._getCoordinates('outright'));
+
+                        this.$prevItm.addClass(speedClass).css(this._getCoordinates('left'));
+
+                        if (this.itemsCount > 5) {
+                            this.$nextItm.addClass(speedClass).css(this._getCoordinates('hide'));
+                            this.$nextItm.off('click.carrousel');
+                        }
+
+                        var prevEle = ( this.$prevItm.index() === 0 ) ? this.$items.eq(this.itemsCount - 1) : this.$prevItm.prev();
+                        $(prevEle).addClass(speedClass).css(this._getCoordinates('outleft'));
+                        $(prevEle).off('click.carrousel');
+
+                        break;
+                }
+                ;
+                this._setItems();
+            }
+        },
+
+        // 自动切换
+        _startSlideshow: function () {
+            if (this.slideshow) {
+                clearInterval(this.slideshow);
+            }
+            var _self = this;
+            this.slideshow = setInterval(function () {
+                if ($('.dg-center')[0] && !_self.isAnim) {
+                    _self._navigate('next');
+                }
+            }, this.options.interval);
+        },
+
+        _stopSlideshow: function () {
+            clearTimeout(this.slideshow);
+        }
+    };
+
+    $.fn.carrousel = function (options) {
+        if (typeof options === 'object') {
+            this.each(function () {
+                var instance = $.data(this, 'carrousel');
+                if (!instance) {
+                    $.data(this, 'carrousel', new $.carrousel(options, this));
+                }
+            });
+        }
+        else if (typeof options === 'string') {
+            this.each(function () {
+                var instance = $.data(this, 'carrousel');
+                if (instance) {
+                    switch (options) {
+                        case 'play':
+                            instance._startSlideshow();
+                            instance.options.autoplay = true;
+                            break;
+                        case 'stop':
+                            instance._stopSlideshow();
+                            instance.options.autoplay = false;
+                            break;
+                        case 'next':
+                            instance._navigate('next');
+                            break;
+                        case 'prev':
+                            instance._navigate('prev');
+                            break;
+                    }
+                }
+            });
+        }
+        else if (typeof options === 'number') {
+            this.each(function () {
+                var instance = $.data(this, 'carrousel');
+                instance.button[options].click();
+            });
+        }
+        return this;
+    };
+
+})(jQuery);

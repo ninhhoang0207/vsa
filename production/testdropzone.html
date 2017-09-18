@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentelella Alela! | </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <!-- Dropzone.js -->
+    <link href="../vendors/dropzone/dist/min/dropzone.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                    <h3>Form Upload </h3>
+                </div>
+
+         
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2>Dropzone multiple file uploader</h2>
+                        <div class="clearfix"></div>
+                    </div>
+                  <div class="x_content">
+                    <input type="text" name="img_name" class="form-control" />
+                    <p>Drag multiple files to the box below for multi upload or click to select files. This is for demonstration purposes only, the files are not uploaded to any server.</p>
+                    <form method="post" action="uploaded.php"  enctype="multipart/form-data">
+                        <button type="submit">Submit</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+     <!-- Dropzone -->
+    <script src="../vendors/dropzone/dist/min/dropzone.min.js"></script>
+    
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+    <script type="text/javascript">
+       var photo_counter = 0;
+       Dropzone.options.realDropzone = {
+
+        uploadMultiple: false,
+        parallelUploads: 100,
+        maxFilesize: 8,
+        addRemoveLinks: true,
+        dictRemoveFile: 'Remove',
+        dictFileTooBig: 'Image is bigger than 8MB',
+
+    // The setting up of the dropzone
+    init:function() {
+
+        this.on("removedfile", function(file) {
+
+            $.ajax({
+                type: 'POST',
+                url: 'upload/delete',
+                data: {id: file.name, _token: $('#csrf-token').val()},
+                dataType: 'html',
+                success: function(data){
+                    // var rep = JSON.parse(data);
+                    // if(rep.code == 200)
+                    // {
+                    //     photo_counter--;
+                    // }
+                    console.log(data);
+                }
+            });
+
+        } );
+    },
+    error: function(file, response) {
+        if($.type(response) === "string")
+            var message = response; //dropzone sends it's own error messages in string
+        else
+            var message = response.message;
+        file.previewElement.classList.add("dz-error");
+        _ref = file.previewElement.querySelectorAll("[data-dz-errormessage]");
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+            node = _ref[_i];
+            _results.push(node.textContent = message);
+        }
+        return _results;
+    },
+    success: function(file,done) {
+        photo_counter++;
+        console.log(file);
+        console.log(done);
+    }
+}
+    </script>
+  </body>
+</html>

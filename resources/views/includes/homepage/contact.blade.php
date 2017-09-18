@@ -1,0 +1,12 @@
+{{-- fix-nhanthongbao --}}
+<div id="contacts" class="hidden-xs">
+	<div class="contact-tt contact_home">
+		<a href="{{ route('homepage.index') }}"><i class="icon fa fa-home"></i></a>
+	</div>
+	<div class="contact-tt contact_phone">
+		<a href="{{ route('contact') }}"><i class="icon fa fa-phone"></i></a>
+	</div>
+	<div class="contact-tt contact_email">
+		<a class="btn-top" href="javascript:void(0);" title="Top" style="display: inline;"><i class="icon fa fa-chevron-up" ></i></a> 
+	</div>
+</div>

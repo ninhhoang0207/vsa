@@ -1,0 +1,17 @@
+[12-Sep-2017 15:36:46 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strimwidth() in /home/hieph451/public_html/vendor/laravel/framework/src/Illuminate/Support/Str.php on line 198
+[13-Sep-2017 15:48:05 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067221 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 15:49:14 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067348 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 15:54:19 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067348 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 16:26:15 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to undefined function Illuminate\Filesystem\finfo_file() in /home/hieph451/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 299
+[13-Sep-2017 16:26:25 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to undefined function Illuminate\Filesystem\finfo_file() in /home/hieph451/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 299
+[13-Sep-2017 16:26:25 Asia/Ho_Chi_Minh] PHP Fatal error:  Call to undefined function Illuminate\Filesystem\finfo_file() in /home/hieph451/public_html/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php on line 299
+[13-Sep-2017 21:50:34 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067142 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 21:51:24 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067193 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 21:52:33 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067147 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 21:54:23 Asia/Bangkok] PHP Warning:  POST Content-Length of 11049471 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 21:58:06 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067225 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 22:07:57 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067228 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 22:41:18 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067144 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[13-Sep-2017 22:46:53 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067149 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-Sep-2017 09:25:04 Asia/Bangkok] PHP Warning:  POST Content-Length of 10571432 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[14-Sep-2017 13:24:15 Asia/Bangkok] PHP Warning:  POST Content-Length of 9067271 bytes exceeds the limit of 8388608 bytes in Unknown on line 0

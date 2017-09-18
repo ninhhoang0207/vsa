@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Font Awesome';
+  src: url('../fonts/FontAwesome.otf');
+  src: url('../fonts/fontawesome-webfont.ttf');
+  src: url('../fonts/fontawesome-webfont.woff');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeueBd.ttf');
+  src: url('../fonts/HelveticaNeue Light.ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica Normal Regular';
+  src: url ('../fonts/helvetica-normal.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/opensans/v13/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans-Regular.ttf');
+  src: url('../fonts/OpenSans-Bold.ttf');
+  src: url('../fonts/OpenSans-BoldItalic.ttf');
+  src: url('../fonts/OpenSans-Light.ttf');
+  src: url('../fonts/OpenSans-BoldItalic.ttf');
+  src: url('../fonts/OpenSans-ExtraBold.ttf');
+  src: url('../fonts/OpenSans-Italic.ttf');
+}
+@font-face {
+  font-family: 'Georgia';
+  src: url('../fonts/georgiab.ttf');
+}
+@font-face {
+  font-family: 'slick';
+  src: url('../fonts/slick.woff'); 
+  src: url('../fonts/slick.ttf');
+}
